@@ -1,4 +1,4 @@
-title: Long Haul
+title: Deepak Chauhan
 description: Long Form Jekyll theme built with SASS
 
 url: https://long-haul.netlify.app
@@ -25,13 +25,12 @@ navigation:
       url: /contact
 
 social:
-    github: brianmaierjr
-    twitter: brianmaierjr
-    facebook: brianmaierjr
-    email: brimaidesigns@gmail.com
-    linkedin: brianmaierjr
+    github: Dmoment
+    twitter: rishudc119
+    email: rishudc119@gmail.com
+    linkedin: deepak-chauhan-a3426b11a
 
-google_analytics: "UA-58263416-1"
+google_analytics: ""
 
 disqus:
-    shortname: brianmaierjr
+    shortname: 
