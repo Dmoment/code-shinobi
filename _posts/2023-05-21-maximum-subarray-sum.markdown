@@ -4,17 +4,15 @@ title:  "Finding Maximum Sum of Contiguous Array"
 date:   2023-05-21
 ---
 
-<p class="intro"><span class="dropcap">K</span>adane Algorithm</p>
-
-# Finding Maximum Sum of Contiguous Array: A Cross-Language Solution 
+<p class="intro"><span class="dropcap">F</span>inding Maximum Sum of Contiguous Array: A Cross-Language Solution</p>
 
 In this article, we're exploring a popular algorithm problem - finding the maximum sum of a contiguous array. The problem essentially requires us to find a contiguous subarray with the largest sum. We'll be using Python, Go, Ruby and JavaScript for this task.
 
-## The Problem
+### The Problem
 
 Given an array of integers (both positive and negative), we need to find a contiguous subarray that yields the maximum sum.
 
-## Python Solution
+### Python Solution
 
 In Python, we're implementing two solutions: a traditional double loop approach and Kadane's algorithm which optimizes the process.
 
@@ -47,12 +45,12 @@ def kadane_approach(input):
 print(kadane_approach(input))
 ```
 
-## Go Solution
+### Go Solution
 
 In Go, we similarly provide two approaches - the traditional method and Kadane's Algorithm.
 
 ```go
-  package main
+package main
 
 import (
 "fmt"
@@ -100,12 +98,12 @@ func main() {
 }
 ```
 
-## Ruby solution
+### Ruby solution
 
 For Ruby, we again use the two approaches.
 
 ```ruby
-  # Double loop approach
+# Double loop approach
 def max_subarray_sum(input)
   n = input.length
   ans = input[0]
@@ -135,12 +133,12 @@ end
 print kadane_approach(input)
 ```
 
-## Javascript Solution
+### Javascript Solution
 
 Finally, we look at JavaScript, implementing both solutions.
 
 ```javascript
-  // Double loop approach
+// Double loop approach
 function maxSubarraySum(input){
   let N = input.length
   let ans = input[0]
@@ -173,6 +171,6 @@ console.log(maxSubarraySum([1, 2, 3, 4, -10]));
 console.log(kadane_approach([1, 2, 3, 4, -10])); 
 ```
 
-## Conclusion
+### Conclusion
 
 While the double loop approach works, its time complexity is O(n^2), which isn't ideal for larger arrays. Kadane's algorithm, on the other hand, optimizes this and runs with a time complexity of O(n). This comparative analysis of the solutions in four different languages offers a clear view of how optimization can drastically improve performance.
