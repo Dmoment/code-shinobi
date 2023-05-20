@@ -11,7 +11,7 @@ header: large
 sass:
     style: compressed
 
-markdown: kramdown
+markdown: markdown
 highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 5
