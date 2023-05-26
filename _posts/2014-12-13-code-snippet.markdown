@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Post With A Code Snippet"
-date:   2014-12-13
+title:  "Preventing Concurrent Migrations in a Distributed Environment"
+date:   2023-05-27
 ---
 
 <p class="intro"><span class="dropcap">I</span>n a distributed environment, where multiple apps share a single database, running migrations simultaneously can lead to conflicts and deployment failures. In this article, we'll explore a solution to prevent concurrent migrations and ensure smooth deployments. We'll discuss the issue, the approach used, and the code changes implemented to tackle this problem.</p>
