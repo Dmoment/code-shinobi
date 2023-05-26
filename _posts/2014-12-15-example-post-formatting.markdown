@@ -5,61 +5,173 @@ date:   2014-12-15
 description: This is a post description for meta purposes. This is also the excerpt of the article that shows up on the index/home page. Change this in the post YAML.
 ---
 
-<p class="intro"><span class="dropcap">C</span>urabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
+<p class="intro"><span class="dropcap">F</span>inding Maximum Sum of Contiguous Array: A Cross-Language Solution</p>
 
-# Heading 1
+In this article, we're exploring a popular algorithm problem - finding the maximum sum of a contiguous array. The problem essentially requires us to find a contiguous subarray with the largest sum. We'll be using Python, Go, Ruby and JavaScript for this task.
 
-## Heading 2
+### The Problem
 
-### Heading 3
+Given an array of integers (both positive and negative), we need to find a contiguous subarray that yields the maximum sum.
 
-#### Heading 4
+### Python Solution
 
-##### Heading 5
+In Python, we're implementing two solutions: a traditional double loop approach and Kadane's algorithm which optimizes the process.
 
-###### Heading 6
+```python
+import math
 
-<blockquote>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.</blockquote>
+# Double loop approach
+def max_subarray_sum(input):
+  N = len(input)
+  ans = input[0]
+  for i in range(N):
+    sum = 0
+    for j in range(i, N):
+      sum += input[j]
+      ans = max(ans, sum)
+  return ans 
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+# Kadane's Algorithm
+def kadane_approach(input):
+  N = len(input)
+  ans = -math.inf
+  sum = 0
+  for i in range(N):
+    sum += input[i]
+    ans = max(ans, sum)
+    if sum < 0:
+      sum = 0
+  return ans     
 
-## Unordered List
-* List Item
-* Longer List Item
-  * Nested List Item
-  * Nested Item
-* List Item
+print(kadane_approach(input))
+```
 
-## Ordered List
-1. List Item
-2. Longer List Item
-    1. Nested OL Item
-    2. Another Nested Item
-3. List Item
+### Go Solution
 
-## Definition List
-<dl>
-  <dt>Coffee</dt>
-  <dd>Black hot drink</dd>
-  <dt>Milk</dt>
-  <dd>White cold drink</dd>
-</dl>
+In Go, we similarly provide two approaches - the traditional method and Kadane's Algorithm.
 
-Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+```go
+package main
 
-## Table
+import (
+"fmt"
+"math"
+)
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-| Header      | Title       |
-| Paragraph   | Text        |
+// Double loop approach
+func maximum_subarray_sum(input []int) int{
+  N := len(input)
+  ans := input[0]
+  sum := 0
+  for i := 0; i< N ; i++ {
+    sum = 0
+    for j := i; j< N; j++{
+      sum += input[j]
+      if sum > ans {
+        ans = sum
+      }
+    }
+  }
+  return ans
+}
 
-Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+// Kadane's Algorithm
+func kadane_approach(input []int) int{
+  N := len(input)
+  sum := 0
+  ans := int(math.Inf(-1))
+  for i:=0; i < N; i++ {
+    sum += input[i]
+    if sum > ans {
+      ans = sum
+    }
+    if sum < 0{
+      sum = 0
+    }
+  }
+  return ans
+}
 
-Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.
+func main() {
+  input := []int{1, 2, 3, 4, -10}
+  fmt.Println(maximum_subarray_sum(input))
+  fmt.Println(kadane_approach(input))
+}
+```
 
-Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+### Ruby solution
 
-Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+For Ruby, we again use the two approaches.
+
+```ruby
+# Double loop approach
+def max_subarray_sum(input)
+  n = input.length
+  ans = input[0]
+  for i in 0...n
+    sum = 0
+    for j in i...n
+      sum = sum + input[j]
+      ans = [ans, sum].max
+    end
+  end
+  ans
+end
+
+# Kadane's Algorithm
+def kadane_approach(input)
+  n = input.length
+  sum = 0
+  ans = -Float::INFINITY
+  for i in 0...n
+    sum = sum + input[i]
+    ans = [ans, sum].max
+    sum = 0 if sum < 0
+  end
+  ans
+end
+
+print kadane_approach(input)
+```
+
+### Javascript Solution
+
+Finally, we look at JavaScript, implementing both solutions.
+
+```javascript
+// Double loop approach
+function maxSubarraySum(input){
+  let N = input.length
+  let ans = input[0]
+  for (var i = 0; i< N; i++){
+    sum = 0
+    for (var j = i; j<N; j++){
+      sum += input[j]
+      ans = Math.max(ans, sum)
+    }
+  }
+  return ans
+}
+
+// Kadane's Algorithm
+function kadane_approach(input){
+  let N = input.length
+  let sum = 0
+  let ans = Number.NEGATIVE_INFINITY
+  for (var i = 0; i< N; i++){
+    sum += input[i]
+    ans = Math.max(ans, sum)
+    if(sum < 0){
+      sum = 0
+    }
+  }
+  return ans
+}
+
+console.log(maxSubarraySum([1, 2, 3, 4, -10]));
+console.log(kadane_approach([1, 2, 3, 4, -10])); 
+```
+
+### Conclusion
+
+While the double loop approach works, its time complexity is O(n^2), which isn't ideal for larger arrays. Kadane's algorithm, on the other hand, optimizes this and runs with a time complexity of O(n). This comparative analysis of the solutions in four different languages offers a clear view of how optimization can drastically improve performance.
