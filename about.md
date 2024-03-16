@@ -5,9 +5,11 @@ title: About Me
 
 <div class="post">
 	<h1 class="pageTitle">About Me</h1>
-	<img src="{{ '/assets/img/profile.jpg' }}" alt="" style="border-radius: 50%;">
+	<div class="image-container">
+  <img src="{{ '/assets/img/profile.jpg' }}" alt="" style="border-radius: 50%; border: 2px solid;">
+</div>
  <!-- Replace with your image path -->
-	<p class="intro">Hey there! I'm a full-stack Rails developer since 2019, keen on building efficient and scalable applications. Though I've got Ruby on Rails and Agile methodologies down, I'm still wrestling a bit with CSS. But hey, who's perfect, right? I'm all about team collaboration and contributing to cool projects. So, here I am, ready to learn, grow, and drive success.
+	<p class="intro">Hey there! I'm a Ruby on Rails Developer passionate about building web applications that are easy to maintain, scale, and use. I love solving problems, making websites run smoothly, and working with others to come up with cool ideas. I'm excited to use my Ruby on Rails knowledge, along with my experience in working as part of a team and using Agile ways of doing things, to help a company grow and make awesome projects come to life.
 </p>
 	
 	<h2>Experience</h2>
@@ -21,27 +23,36 @@ title: About Me
 		<li>Implemented RESTful APIs for seamless integration between front-end and back-end components.</li>
 		<li>Practiced TDD to ensure high-quality code and minimize technical debt.</li>
 		<li>Contributed to code reviews and participated in daily stand-ups, sprint planning, and retrospective meetings.</li>
+		<li>Contributed to numerous architectural transformations that required extensive modifications to the core structure.</li>
 	</ul>
 
-	<h3>Vendo (Ecommerce Platform)</h3>
-	<p><i>June 2022 – Present | Ruby on Rails Developer</i></p>
+	<h3>Vendo via Spark Solutions (Ecommerce Platform)</h3>
+	<p><i>June 2022 – March 2023 | Senior Software Engineer</i></p>
 	<ul>
 		<li>Worked extensively with the open source Spree engine and integrated various third-party APIs for added functionality.</li>
 		<li>Improved the performance of existing applications through optimization and refactoring techniques.</li>
 	</ul>
 
-	<h2>Stuff I've Figured Out Along the Way</h2>
-	<p>Hey there! I've picked up a thing or two on this crazy ride as a developer. Here's the gist:</p>
-
+	<h3>Fullscript via Spark Solutions (Ecommerce Platform)</h3>
+	<p><i>March 2023 – Present | Senior Software Engineer</i></p>
 	<ul>
-		<li>Sharing what I know? It's a no-brainer. We all learn, we all grow. Win-win, right?</li>
-		<li>I try to do stuff that's out of the ordinary. Being different isn't just cool, it's where all the fun stuff happens.</li>
-		<li>Learning things the hard way? Sounds tough, but trust me, it's worth it. Nothing like a challenge to make you appreciate the nitty-gritty of coding.</li>
-		<li>I'm all about diving headfirst into what interests me. Mastering your craft isn't just about being the best - it's a heck of a lot of fun too.</li>
-		<li>Everything I do leaves an impression on someone else. So, why not make it a good one? Great design isn't just nice to look at, it changes how we experience the world.</li>
-		<li>Know your worth and don't sell yourself short. I pour my heart and soul into my work, and it shows.</li>
-		<li>Scary things aren't so scary once you give them a shot. Some of the best surprises have come from stepping outside my comfort zone.</li>
-		<li>Want to be a coding whiz? There's no big secret. Write tons of code, use your software like there's no tomorrow, and voilà!</li>
-		<li>What's the coolest thing about writing software? Easy. We get to boss machines around and make them do incredible stuff. How cool is that?</li>
+		<li>Worked at Fullscript, focusing on optimizing the wholesale checkout process to improve user experience and enhance operational efficiency.</li>
+		<li>Contributed to the development of new features for Emerson Ecologies, a newly acquired platform by Fullscript.</li>
+		<li>Crafted optimized SQL queries to efficiently migrate millions of data records, ensuring minimal table lock durations during the migration process.</li>
 	</ul>
+
+	
+<h2>Lessons Learned on My Coding Journey</h2>
+<p>Hello! Throughout my journey as a developer, I've gathered some valuable insights:</p>
+<ul>
+    <li>Sharing knowledge is fundamental. It’s a two-way street where everyone benefits and grows together.</li>
+    <li>I love to explore the unconventional. Standing out not only sets you apart but is also where the real excitement lies.</li>
+    <li>Tackling challenges the hard way has its rewards. It deepens your understanding and makes you value the intricacies of coding.</li>
+    <li>Immersing myself in what fascinates me is key. Excelling in your field is rewarding and incredibly enjoyable.</li>
+    <li>My actions have an impact on others. Striving for outstanding design can transform people’s experiences.</li>
+    <li>Recognizing my value is crucial. I invest my heart and effort in my work, and it reflects in the quality.</li>
+    <li>Stepping out of my comfort zone has been enlightening. Embracing the unknown has led to some of my greatest discoveries.</li>
+    <li>Becoming proficient in coding doesn’t have a magic formula. It’s about writing a lot of code, actively using your creations, and seeing the results.</li>
+    <li>The most amazing part of software development? We get the power to command machines to perform wonders. Isn’t that amazing?</li>
+</ul>
 </div>

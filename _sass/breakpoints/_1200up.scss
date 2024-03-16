@@ -5,3 +5,17 @@ body {
 .container {
   max-width: 990px;
 }
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.image-container img {
+  border-radius: 50%;
+  border: 2px solid;
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  object-fit: cover;
+}
